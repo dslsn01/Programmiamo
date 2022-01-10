@@ -1,0 +1,37 @@
+<project name="App" default="all">
+	<property name="src.dir" value="src" />
+	<property name="build.dir" value="build" />
+	<property name="classes.dir" value="${build.dir}/classes" />
+	<property name="sqlite.driver" value="sqlite-jdbc-3.32.3.2.jar" />
+
+	<!-- clean -->
+	<target name="clean">
+		<delete dir="${build.dir}"/>
+	</target>
+
+	<!-- compile -->
+	<target name="build" depends="clean">
+		<mkdir dir="${classes.dir}" />
+		<javac srcdir="${src.dir}" destdir="${classes.dir}"/>
+	</target>
+
+	<!-- jar -->
+	<target name="jar" depends="build">
+		<jar destfile="${ant.project.name}.jar" basedir="${classes.dir}">
+			<manifest>
+				<attribute name="Main-Class" value="programmiamo.ind.Application" />
+			</manifest>
+			<!-- include il driver di sqlite per maggior comodità -->
+			<zipgroupfileset dir="." includes="${sqlite.driver}" />
+		</jar>
+	</target>
+
+	<!-- run -->
+	<target name="run" depends="jar">
+		<java jar="${ant.project.name}.jar" fork="true">
+		</java>
+	</target>
+
+	<target name="all" depends="clean,build,jar" />
+</project>
+

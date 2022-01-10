@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      h2 { text-align: center; }
+      form {
+             margin: 0 auto; 
+             width: 350px; 
+             display: table;
+           }
+      p { display: table-row; }
+      label { display: table-cell; }
+      input { display: table-cell; }
+    </style>
+  </head>
+  <body style="text-align: center">
+   <h2>Calcola il rapporto tra debiti e reddito</h2>
+   <form method="POST" action="beratio">
+     <p>
+       <label>Prestito richiesto: </label><input type="text" name="loan">
+     <p/>
+     <p>
+       <label>Totale uscite mensili: </label><input type="text" name="debts">
+     </p>
+     <p>
+       <label>Reddito mensile: </label><input type="text" name="income">
+     <p/>
+     <p>
+       <label>Numero di rate desiderato: </label>
+       <select name="nMonths">
+          <option value="12">12 rate</option>
+          <option value="24">24 rate</option>
+          <option value="36">36 rate</option>
+          <option value="60">60 rate</option>
+          <option value="120">120 rate</option>
+       </select>
+     </p>
+     <button type="submit">Invia</button>
+    </form>
+  </body>
+</html>
+

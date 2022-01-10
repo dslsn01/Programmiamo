@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" ref="data:,">
+    <title>Homepage</title>
+    <style>
+      h2 { text-align: center; }
+      form {
+             margin: 0 auto; 
+             width: 350px; 
+             display: table;
+           }
+      p { display: table-row; }
+      label { display: table-cell; }
+      input { display: table-cell; }
+    </style>
+  </head>
+  <body>
+    <h2>Form di iscrizione</h2>
+      <form method="POST" action="summary">
+        <p>
+          <label>Nome: </label><input type="text" name="nome">
+        <p/>
+
+        <p>
+          <label>Cognome: </label><input type="text" name="cognome">
+        </p>
+
+        <p>
+          <label>Indirizzo: </label><input type="text" name="indirizzo">
+        <p/>
+
+        <p>
+          <label>Telefono: </label><input type="text" name="telefono">
+        <p/>
+
+        <p>
+          <label>E-Mail: </label><input type="text" name="email">
+        <p/>
+
+        <p>
+          <label>Carta di credito: </label><input type="text" name="credit_card">
+        <p/>
+
+        <p>
+          <label>Codice di verifica: </label><input type="text" name="verification">
+        <p/>
+
+        <button type="submit">Invia</button>
+      </form>
+  </body>
+</html>
+

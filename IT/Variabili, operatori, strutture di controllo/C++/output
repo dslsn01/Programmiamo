@@ -1,0 +1,27 @@
+In file included from /usr/local/include/c++/5.1.0/regex:35:0,
+                 from calc.cpp:7:
+/usr/local/include/c++/5.1.0/bits/c++0x_warning.h:32:2: error: #error This file requires compiler and library support for the ISO C++ 2011 standard. This support is currently experimental, and must be enabled with the -std=c++11 or -std=gnu++11 compiler options.
+ #error This file requires compiler and library support for the \
+  ^
+calc.cpp:12:12: error: ‘std::regex’ has not been declared
+ using std::regex;
+            ^
+calc.cpp: In function ‘int main()’:
+calc.cpp:22:2: error: ‘regex’ was not declared in this scope
+  regex num(R"([+-]?[0-9]+)");
+  ^
+calc.cpp:24:26: error: ‘num’ was not declared in this scope
+  while (!regex_match(o1, num)) {
+                          ^
+calc.cpp:24:29: error: ‘regex_match’ was not declared in this scope
+  while (!regex_match(o1, num)) {
+                             ^
+calc.cpp:31:26: error: ‘num’ was not declared in this scope
+  while (!regex_match(o2, num)) {
+                          ^
+calc.cpp:31:29: error: ‘regex_match’ was not declared in this scope
+  while (!regex_match(o2, num)) {
+                             ^
+calc.cpp:40:18: error: ‘stoi’ was not declared in this scope
+  int n1 = stoi(o1);
+                  ^

@@ -1,0 +1,12 @@
+body {
+  text-align: center;
+  background-color: blue;
+}
+
+h1, p {
+  color: yellow;
+}
+
+p {
+  font-style: italic;
+}
