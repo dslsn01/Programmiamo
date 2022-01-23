@@ -91,7 +91,7 @@ public class Esercizio30 {
 			conn = DriverManager.getConnection("jdbc:sqlite:" + dbName);
 
 			String name = "";
-			BigDecimal maxExp = new BigDecimal(1000);
+			BigDecimal maxExp = new BigDecimal("1000");
 			String lastLogin = "";
 
 			System.out.println("#####################################################");
@@ -323,7 +323,7 @@ public class Esercizio30 {
 					try {
 						BigDecimal v = new BigDecimal(imp);
 
-						if (v.add(maxExp).compareTo(new BigDecimal(10000)) <= 0) {
+						if (v.add(maxExp).compareTo(new BigDecimal("10000")) <= 0) {
 							maxExp = maxExp.add(v);
 							System.out.println("Hai ricaricato " + imp + ". Credito attuale: " + maxExp);
 							pStmt = conn.prepareStatement("UPDATE users SET maxExp = ? WHERE username = ?");

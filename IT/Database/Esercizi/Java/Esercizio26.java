@@ -61,8 +61,8 @@ public class Esercizio26 {
 				// saldo conto corrente
 				BigDecimal pbal = res.getBigDecimal(1);
 				String iban = res.getString(2);
-				BigDecimal sbal = new BigDecimal(0.0);
-				BigDecimal imp = new BigDecimal(0.0);
+				BigDecimal sbal = new BigDecimal("0.0");
+				BigDecimal imp = new BigDecimal("0.0");
 				String i = console.readLine("Importo (accredito o addebito): ");
 
 				try {

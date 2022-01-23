@@ -122,7 +122,7 @@ public class Esercizio28 {
 					pStmt = conn.prepareStatement("SELECT ident, bal FROM customers WHERE iban = ?");
 					pStmt.setString(1, b_iban);
 					res = pStmt.executeQuery();
-					BigDecimal dBal = new BigDecimal(0);
+					BigDecimal dBal = new BigDecimal("0");
 
 					if (!res.isBeforeFirst()) {
 						System.err.println("IBAN non esistente!");
@@ -138,7 +138,7 @@ public class Esercizio28 {
 
 					String s = console.readLine("Importo bonifico: ");
 
-					BigDecimal imp = new BigDecimal(0);
+					BigDecimal imp = new BigDecimal("0");
 					try {
 						imp = new BigDecimal(s);
 						if (bal.subtract(imp).compareTo(BigDecimal.ZERO) < 0) {
@@ -205,8 +205,8 @@ public class Esercizio28 {
 					pStmt.setString(1, n_acc);
 					res = pStmt.executeQuery();
 
-					BigDecimal imp = new BigDecimal(0);
-					BigDecimal dBal = new BigDecimal(0);
+					BigDecimal imp = new BigDecimal("0");
+					BigDecimal dBal = new BigDecimal("0");
 
 					if (!res.isBeforeFirst()) {
 						res.close();
