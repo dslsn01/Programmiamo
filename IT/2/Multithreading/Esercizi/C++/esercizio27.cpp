@@ -5,6 +5,7 @@ oppure (c++20):
 g++ -std=c++20 esercizio27.cpp -lpthread
 */
 
+#include <cstdio>
 #include <thread>
 #include <mutex>
 #if __cplusplus > 201703L

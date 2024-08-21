@@ -1,4 +1,0 @@
-#!/bin/bash
-
-sqlite3 bank.db "BEGIN TRANSACTION;DROP TABLE IF EXISTS customers;DROP TABLE IF EXISTS mov;DROP TABLE IF EXISTS deposit;COMMIT;"
-

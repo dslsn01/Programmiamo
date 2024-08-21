@@ -2,7 +2,7 @@
 file esercizio16.cpp
 compilare con: g++ -std=c++20 esercizio16.cpp
 */
-
+#include <algorithm>
 #include <iostream>
 #include <iterator>
 #include <vector>
