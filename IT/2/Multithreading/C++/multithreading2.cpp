@@ -4,7 +4,6 @@ compilare con: g++ -std=c++11 multithreading2.cpp -lpthread
 */
 
 #include <cstdio>
-#include <cstdlib>
 #include <thread>
 
 using std::thread;
